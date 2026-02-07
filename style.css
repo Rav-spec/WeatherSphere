@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+        * {
+            font-family: 'Patua One', serif;
+        }
+
+        html {
+            height: auto;
+            width: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Patua One', serif;
+            text-transform: capitalize;
+            background-color: rgb(95, 188, 234);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .header {
+            margin: 0px 0px;
+            position: relative;
+            background-color: rgb(191, 235, 249);
+            color: #d73131;
+            padding: 10px 0;
+
+        }
+
+        .header h1 {
+            color: rgb(214, 147, 45);
+            text-decoration: underline;
+            font-family: 'Patua One', serif;
+            font-style: normal;
+        }
+
+        .search-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+
+        .search-container input[type="text"] {
+            width: 190px;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            transition: width 0.4s ease-in-out;
+            float: left;
+        }
+
+        .search-container input[type="text"]:focus {
+            width: 250px;
+        }
+
+        .search-container button {
+            font-family: 'Patua One', serif;
+            color: antiquewhite;
+            float: right;
+            background-color: rgb(255, 138, 36);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: background-color 0.4s;
+        }
+
+        .search-container button:hover {
+            background-color: #ffa31a;
+            transform: scale(1.05);
+
+        }
+
+        .weather {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        #city {
+            font-size: 30px;
+        }
+
+        .weather img {
+            width: 120px;
+            height: 120px;
+            border-radius: 30%;
+            background: rgba(174, 184, 192, 0.447);
+        }
+
+        #temperature {
+            font-size: 50px;
+            margin: 0;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .temp-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        #clouds {
+            font-size: 20px;
+            background: rgb(127, 169, 44);
+            padding: 2px 20px;
+            border-radius: 15px;
+        }
+
+        main {
+            display: grid;
+            grid-column-gap: 25px;
+            grid-template-columns: 1fr 5px 1fr;
+            align-items: center;
+            margin: 0 50px;
+            color: #ffffff;
+        }
+
+        .next {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .next p,
+        .next h3 {
+            margin: 3px 0;
+        }
+
+        .forecstD {
+            margin: 20px 50px;
+            color: aliceblue;
+        }
+
+        .weekF {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .cast-header {
+            color: aliceblue;
+            background: rgba(255, 119, 0, 0.795);
+            width: max-content;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .divider1,
+        .divider2 {
+            background: rgba(254, 189, 132, 0.539);
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .divider2 {
+            height: 5px;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        .time,
+        .date {
+            color: rgb(254, 170, 96);
+        }
+
+        .desc {
+            color: rgb(200, 255, 100);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            opacity: 85%;
+
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        .subcontent {
+            background-color: #fffffff3;
+        }
+
+        .subcontent:hover {
+            background-color: #f7f7f7;
+        }
+
+        .light {
+            background-color: rgb(95, 188, 234);
+            text-decoration-color: black;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark {
+            background-color: rgb(0, 19, 82);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        li {
+            z-index: 9;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+          }
+          
+          .footer-content {
+            display: flex;
+            justify-content: start;
+          }
+          
+          .footer-content p {
+            margin: 0 20px;
+          }
+          
+          .footer-content a {
+            color: #fff;
+            text-decoration: none;
+          }
+          
+          .footer-content a:hover {
+            text-decoration: underline;
+          }
+          nav{
+            display: flex;
+            justify-content: end;
+          }
+          #WeatherSphere{
+            position: fixed;
+            top: 0px;
+            left: 5px;
+            font-size: large;
+            color: #192ef0;
+            text-decoration: underline;
+          }
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 8px 0;
+    }
+
+    .search-container {
+        top: 30%; 
+    }
+
+    .temp-box {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .temp-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .weather {
+        padding: 20px;
+    }
+
+    .divider1,
+    .divider2 {
+        display: none;
+    }
+
+    .forecstD,
+    .forecstH {
+        margin: 10px; 
+    }
+
+    .weekF {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+#WeatherSphere {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: large;
+    color: #192ef0;
+    text-decoration: underline;
+    z-index: 999;
+}
+
+#sbar {
+    position: fixed;
+    top: 10px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-container button {
+    font-family: 'Patua One', serif;
+    color: antiquewhite;
+    background-color: rgb(255, 138, 36);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: background-color 0.4s;
+}
+
+}

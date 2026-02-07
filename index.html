@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherSphere</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+<header>
+<nav>
+<ul>
+<p id="WeatherSphere">WeatherSphere</p>
+<li><a id="theme" href="#">Theme</a>
+<ul>
+<li class="subcontent"><a href="#" onclick="changeTheme('light');">Light Mode</a></li>
+<li class="subcontent"><a href="#" onclick="changeTheme('dark');">Dark Mode</a></li>
+</ul>
+</li>
+<li><a id="fonts" href="#">Font Size</a>
+<ul>
+<li class="subcontent"><a href="#" id="default" onclick="adjustFontSize('default');">Default</a></li>
+<li class="subcontent"><a href="#" id="extra-small" onclick="adjustFontSize('extra-small');">Extra Small</a></li>
+<li class="subcontent"><a href="#" id="small" onclick="adjustFontSize('small');">Small</a></li>
+<li class="subcontent"><a href="#" id="large" onclick="adjustFontSize('large');">Large</a></li>
+<li class="subcontent"><a href="#" id="extra-large" onclick="adjustFontSize('extra-large');">Extra Large</a></li>
+</ul>
+</nav>
+</header>
+<div id="sbar" class="search-container">
+<input type="text" id="input" placeholder="Enter location...">
+<button type="submit" id="searchButton">Search</button>
+</div>
+</div>
+<div id="text">
+<main>
+<div class="weather">
+<h2 id="city"></h2>
+<div class="temp-box"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdwaves.de%2F2021%2F08%2F15%2Fhow-to-open-source-weather-forecast-in-privacy-respecting-ways-that-actually-work-100-open-source-android-weather-app%2F&psig=AOvVaw2g50beqr7zqUR4lbvaEvsn&ust=1715099859153000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjvwfm6-YUDFQAAAAAdAAAAABAJ" id="img">
+<p id="temperature">-°C</p>
+</div><span id="clouds"></span>
+</div>
+<div class="divider1"></div>
+<div class="forecstH">
+<p class="cast-header">Upcoming forecast</p>
+<div class="templist"></div>
+</div>
+</main>
+<div class="forecstD">
+<div class="divider2"></div>
+<p class="cast-header">4 day forecast</p>
+<div class="weekF"></div>
+</div>
+</div>
+<footer>
+        <div class="footer-content">
+          <p><a href="https://openweathermap.org/api">API Source</a></p>
+          <P><a id="about" href="about.html">About</a></p>
+          <p><a href="feedback.html">Feedback</a></p>
+        </div>
+      </footer>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="gsap.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
